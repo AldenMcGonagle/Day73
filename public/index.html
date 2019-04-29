@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>day70</title>
+    <title>Math Placement Test</title>
     <style>
     .odd {
         background: orange;
@@ -51,22 +51,22 @@
     console.clear();
 
 
-    function makeQ(q, a, level, i = null) {
+    function makeQ(q, a, level, img = null) {
         let question = {}
         question.q = q;
         question.a = a;
         question.level = level;
-        question.i = i
+        question.img = img
         // question.type = type
         return question;
     }
 
     let questions = [];
-    questions.push(makeQ("2^3", "8", 1));
-    questions.push(makeQ("\\dfrac{1}{2}", ".5", 1));
-    questions.push(makeQ("\\dfrac{1}{2}", ".5", 1));
-    questions.push(makeQ("\\sqrt{16}", "4", 1));
-    questions.push(makeQ("Find the perimeter", "4", 1,"qi.png"));
+    // questions.push(makeQ("2^3", "8", 1));
+    // questions.push(makeQ("\\dfrac{1}{2}", ".5", 1));
+    // questions.push(makeQ("\\dfrac{1}{2}", ".5", 1));
+    // questions.push(makeQ("\\sqrt{16}", "4", 1));
+    // questions.push(makeQ("Find the perimeter", "4", 1,"qi.png"));
 
 
     function makeTest(e) {
@@ -88,9 +88,20 @@
 
     }
 
-    makeTest();
+
 
     $("input").change(checkAnswer);
+
+    $.getJSON('json',function(result){
+        console.log(result);
+        $.each(result,function(i,feild){
+            console.log(feild);
+            questions.push(makeQ(feild.q, feild.a, feild.level, feild.img))
+        })
+
+    makeTest();
+
+    })
 
     function checkAnswer(e) {
         correct = $(this).data("answer");
@@ -103,7 +114,7 @@
         } else {
             $(this).removeClass("correct").addClass("incorrect");
         }
-    }
+    }   
     </script>
 </body>
 
