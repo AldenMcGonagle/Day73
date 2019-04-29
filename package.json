@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/AldenMcGonagle/Day73/issues"
   },
-  "homepage": "https://github.com/AldenMcGonagle/Day73#readme"
+  "homepage": "https://github.com/AldenMcGonagle/Day73#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "google-spreadsheet-to-json": "^1.0.0"
+  }
 }
