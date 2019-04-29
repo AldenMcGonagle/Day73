@@ -1,0 +1,27 @@
+{
+  "name": "day73",
+  "version": "0.0.1",
+  "description": "Math Placement server",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AldenMcGonagle/Day73.git"
+  },
+  "keywords": [
+    "math",
+    "plce",
+    "placement",
+    "google",
+    "sheets"
+  ],
+  "author": "Alden McGonagle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AldenMcGonagle/Day73/issues"
+  },
+  "homepage": "https://github.com/AldenMcGonagle/Day73#readme"
+}
